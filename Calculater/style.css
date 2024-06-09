@@ -1,0 +1,293 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* Global Styles */
+html,body{
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background: #e0e3eb;
+  min-height: 100vh;
+  cursor: auto;
+}
+
+/* Navigation Styles */
+.nav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.nav:hover {
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.2);
+}
+
+.nav.active {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.nav .userBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.nav .userBox .imgBox {
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #6c6868;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgBox img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid black; /
+}
+
+
+.nav .userBox .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.nav .userBox .imgBox:hover {
+  transform: scale(1.1);
+}
+
+.nav .userBox .username {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #1d1c1c;
+  text-align: center;
+  font-weight: bold;
+}
+
+.nav .menuToggle {
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.nav.active .menuToggle {
+  display: block;
+}
+
+.nav .menuToggle .menuContent {
+  margin-top: 20px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.nav .menuToggle .menuContent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav .menuToggle .menuContent ul li {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.nav .menuToggle .menuContent ul li a {
+  text-decoration: none;
+  color: #1d1c1c;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav .menuToggle .menuContent ul li a:hover {
+  color: #007BFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e3eb;
+}
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px 20px 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000e1a;
+  pointer-events: none;
+}
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
+}
+.buttons button:active {
+  transform: scale(0.99);
+}
+.operator {
+  color: #2f9fff;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Dark Mode Styles */
+/* Dark Mode Styles */
+.dark-mode .container {
+  background-color: #1A1A1A;
+  color: #ffffff;
+  box-shadow: rgba(65, 65, 65, 0.25) 0px 54px 55px,
+  rgba(65, 65, 65, 0.12) 0px -12px 30px, 
+  rgba(65, 65, 65, 0.12) 0px 4px 6px, 
+  rgba(65, 65, 65, 0.17) 0px 12px 13px, 
+  rgba(65, 65, 65, 0.09) 0px -3px 5px;
+}
+
+.dark-mode .buttons button {
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+
+.dark-mode .buttons .operator {
+  background-color: #0d0d0d;
+  color: #ff9900; /* Neon blue */
+  border: 1px solid #ff9900; /* Neon blue */
+}
+
+.dark-mode .buttons .operator:hover {
+  background-color: #ff9900; /* Neon blue */
+  color: #222222; /* Dark background color */
+}
+
+.dark-mode .display {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+body.dark-mode  {
+  background-color: #121212;
+}
+
+.dark-mode .nav {
+  background-color: #333333;
+}
+
+.dark-mode .menuContent ul li a {
+  color: #ffffff;
+}
+
+.dark-mode .menuContent ul li a:hover {
+  color: #007BFF;
+}
+
+.dark-mode .modal-content {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-mode .close {
+  color: #aaa;
+}
+
+.dark-mode .close:hover,
+.dark-mode .close:focus {
+  color: #ffffff;
+}
+
+.dark-mode input[type="range"] {
+  background-color: #666;
+}
